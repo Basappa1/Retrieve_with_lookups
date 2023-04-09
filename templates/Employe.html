@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    </head>
+<body>
+    <center>
+        <h1 class="btn btn-primary">Employe Table</h1>
+    <table border="3px">
+        <tr>
+            <th>DEPTNO</th>
+            <th>EMPNO</th>
+            <th>ENAME</th>
+            <th>JOB</th>
+            <th>MGR</th>
+            <th>HIREDATE</th>
+            <th>SALARY</th>
+            <th>COMMISION</th>
+        </tr>
+    {% for i in EMP %}
+            <tr>
+                <td>{{i.DEPTNO}}</td>
+                <td>{{i.EMPNO}}</td>
+                <td>{{i.ENAME}}</td>
+                <td>{{i.JOB}}</td>
+                <td>{{i.MGR}}</td>
+                <td>{{i.HIREDATE}}</td>
+                <td>{{i.SALARY}}</td>
+                <td>{{i.COMMISION}}</td>
+            </tr>    
+    {% endfor %}
+    </table>    
+    </center>
+    <script src="{% static 'js/mdb.min.js' %}"></script> 
+</body>
+</html>

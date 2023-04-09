@@ -1,0 +1,34 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+</head>
+<body>
+    <center>
+        <h1>Department Table</h1>
+        <table border="3px">
+            <tr>
+                <th>DEPTNO</th>
+                <th>DNAME</th>
+                <th>LOCATION</th>
+            </tr>
+        {% for i in DEPT %}
+            <tr>
+               <td>{{i.DEPTNO}}</td>
+               <td>{{i.DNAME}}</td>
+               <td>{{i.LOCATION}}</td>
+            </tr>    
+        {% endfor %}
+        </table>
+    </center>
+
+<script src="{% static 'js/mdb.min.js' %}"></script> 
+   
+</body>
+</html>
